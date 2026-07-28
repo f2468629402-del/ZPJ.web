@@ -1,0 +1,277 @@
+{
+  "generatedAt": "2026-07-20T10:41:26.189Z",
+  "maxEdge": 1600,
+  "ecommerceQuality": 90,
+  "ecommerce": [
+    {
+      "id": "ecommerce-main-01",
+      "status": "optimized",
+      "reason": "resized longest edge to 1600px",
+      "source": "D:/桌面/冯进/整理/电商主图+详情页/西瓜/未标题-6.png",
+      "output": "src/assets/portfolio/ecommerce-main/ecommerce-main-01.webp",
+      "publicOutput": "public/images/portfolio/ecommerce-main/ecommerce-main-01.webp",
+      "beforeBytes": 9439729,
+      "afterBytes": 59154,
+      "width": 232,
+      "height": 1600
+    },
+    {
+      "id": "ecommerce-main-02",
+      "status": "optimized",
+      "reason": "resized longest edge to 1600px",
+      "source": "D:/桌面/冯进/整理/电商主图+详情页/水乳/未标题-3.png",
+      "output": "src/assets/portfolio/ecommerce-main/ecommerce-main-02.webp",
+      "publicOutput": "public/images/portfolio/ecommerce-main/ecommerce-main-02.webp",
+      "beforeBytes": 23162601,
+      "afterBytes": 47868,
+      "width": 160,
+      "height": 1600
+    },
+    {
+      "id": "ecommerce-main-03",
+      "status": "optimized",
+      "reason": "resized longest edge to 1600px",
+      "source": "D:/桌面/冯进/整理/电商主图+详情页/汽水/未标题-1.png",
+      "output": "src/assets/portfolio/ecommerce-main/ecommerce-main-03.webp",
+      "publicOutput": "public/images/portfolio/ecommerce-main/ecommerce-main-03.webp",
+      "beforeBytes": 27495164,
+      "afterBytes": 152670,
+      "width": 269,
+      "height": 1600
+    },
+    {
+      "id": "ecommerce-main-04",
+      "status": "optimized",
+      "reason": "resized longest edge to 1600px",
+      "source": "D:/桌面/冯进/整理/电商主图+详情页/吹风机/未标题-4.png",
+      "output": "src/assets/portfolio/ecommerce-main/ecommerce-main-04.webp",
+      "publicOutput": "public/images/portfolio/ecommerce-main/ecommerce-main-04.webp",
+      "beforeBytes": 38730624,
+      "afterBytes": 72636,
+      "width": 167,
+      "height": 1600
+    },
+    {
+      "id": "ecommerce-main-05",
+      "status": "optimized",
+      "reason": "resized longest edge to 1600px",
+      "source": "D:/桌面/冯进/整理/电商主图+详情页/LABB/未标题-5.png",
+      "output": "src/assets/portfolio/ecommerce-main/ecommerce-main-05.webp",
+      "publicOutput": "public/images/portfolio/ecommerce-main/ecommerce-main-05.webp",
+      "beforeBytes": 11782485,
+      "afterBytes": 55916,
+      "width": 231,
+      "height": 1600
+    }
+  ],
+  "history": [
+    {
+      "image": "/images/portfolio/type-symbol/super-type-01.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 30538,
+      "afterBytes": 30538
+    },
+    {
+      "image": "/images/portfolio/type-symbol/super-type-02.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 106932,
+      "afterBytes": 106932
+    },
+    {
+      "image": "/images/portfolio/type-symbol/super-type-03.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 240454,
+      "afterBytes": 240454
+    },
+    {
+      "image": "/images/portfolio/type-symbol/super-type-04.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 82558,
+      "afterBytes": 82558
+    },
+    {
+      "image": "/images/portfolio/type-symbol/super-type-05.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 65158,
+      "afterBytes": 65158
+    },
+    {
+      "image": "/images/portfolio/type-symbol/super-type-06.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 142504,
+      "afterBytes": 142504
+    },
+    {
+      "image": "/images/portfolio/type-symbol/super-symbol-01.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 304846,
+      "afterBytes": 304846
+    },
+    {
+      "image": "/images/portfolio/type-symbol/super-symbol-02.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 446268,
+      "afterBytes": 446268
+    },
+    {
+      "image": "/images/portfolio/type-symbol/super-symbol-03.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 454780,
+      "afterBytes": 454780
+    },
+    {
+      "image": "/images/portfolio/type-symbol/super-symbol-04.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 419524,
+      "afterBytes": 419524
+    },
+    {
+      "image": "/images/portfolio/type-symbol/super-symbol-05.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 362782,
+      "afterBytes": 362782
+    },
+    {
+      "image": "/images/portfolio/type-symbol/super-symbol-06.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 222212,
+      "afterBytes": 222212
+    },
+    {
+      "image": "/images/portfolio/banner/banner-01.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 44526,
+      "afterBytes": 44526
+    },
+    {
+      "image": "/images/portfolio/banner/banner-02.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 48510,
+      "afterBytes": 48510
+    },
+    {
+      "image": "/images/portfolio/banner/banner-03.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 22692,
+      "afterBytes": 22692
+    },
+    {
+      "image": "/images/portfolio/banner/banner-04.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 76864,
+      "afterBytes": 76864
+    },
+    {
+      "image": "/images/portfolio/banner/banner-05.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 66180,
+      "afterBytes": 66180
+    },
+    {
+      "image": "/images/portfolio/banner/banner-06.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 44434,
+      "afterBytes": 44434
+    },
+    {
+      "image": "/images/portfolio/banner/banner-07.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 66498,
+      "afterBytes": 66498
+    },
+    {
+      "image": "/images/portfolio/banner/banner-08.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 33054,
+      "afterBytes": 33054
+    },
+    {
+      "image": "/images/portfolio/banner/banner-09.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 43364,
+      "afterBytes": 43364
+    },
+    {
+      "image": "/images/portfolio/banner/banner-10.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 55186,
+      "afterBytes": 55186
+    },
+    {
+      "image": "/images/portfolio/icons/icon-design-01.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 121380,
+      "afterBytes": 121380
+    },
+    {
+      "image": "/images/portfolio/icons/icon-design-02.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 117860,
+      "afterBytes": 117860
+    },
+    {
+      "image": "/images/portfolio/icons/icon-design-03.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 163414,
+      "afterBytes": 163414
+    },
+    {
+      "image": "/images/portfolio/icons/icon-design-04.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 247802,
+      "afterBytes": 247802
+    },
+    {
+      "image": "/images/portfolio/icons/icon-design-05.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 44604,
+      "afterBytes": 44604
+    },
+    {
+      "image": "/images/portfolio/icons/icon-design-06.webp",
+      "status": "skipped",
+      "reason": "already optimized webp/avif, avoiding second-generation loss",
+      "beforeBytes": 89790,
+      "afterBytes": 89790
+    }
+  ],
+  "summary": {
+    "scanned": 33,
+    "optimized": 5,
+    "skipped": 28,
+    "failed": 0,
+    "beforeBytes": 114775317,
+    "afterBytes": 4552958,
+    "savedBytes": 110222359,
+    "beforeKB": 112085.3,
+    "afterKB": 4446.2,
+    "savedKB": 107639
+  }
+}

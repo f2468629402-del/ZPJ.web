@@ -1,0 +1,1 @@
+export function Footer(){return <footer className="shell mt-24 flex flex-col gap-4 border-t border-white/10 py-8 text-[10px] tracking-[.16em] text-white/35 md:flex-row md:items-center md:justify-between"><span>© 2026 FENG CREATIVE SYSTEM</span><span>DESIGN × AI × IMAGINATION</span></footer>}

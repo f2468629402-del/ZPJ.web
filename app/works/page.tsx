@@ -1,0 +1,4 @@
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+import { modules } from "@/data/modules";
+export default function Works(){return <main className="shell pt-16"><p className="eyebrow">Full archive / 09 modules</p><h1 className="mt-5 text-6xl font-semibold tracking-[-.055em] md:text-8xl">SELECTED<br/>WORKS</h1><div className="mt-16">{modules.slice(0,7).map((m,i)=><Link href={`/${m.id}`} key={m.id} className="group grid gap-4 border-t border-white/10 py-7 transition hover:bg-white/[.025] md:grid-cols-[80px_1fr_1fr_auto] md:items-center md:px-5"><span className="text-lg" style={{color:m.color}}>{m.number}</span><span className="text-2xl font-medium md:text-3xl">{m.title}</span><span className="text-xs tracking-[.14em] text-white/35">{m.category}</span><ArrowUpRight className="text-white/30 group-hover:text-white"/></Link>)}</div></main>}

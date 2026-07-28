@@ -1,0 +1,6 @@
+import { ArrowUpRight } from "lucide-react";
+import { Project } from "@/data/projects";
+export function WorkCard({project,color}:{project:Project;color:string}){return <article className="group overflow-hidden rounded-[24px] border border-white/10 bg-white/[.025] transition duration-500 hover:-translate-y-1 hover:border-white/25">
+ <div className="relative aspect-[16/10] overflow-hidden"><img src={project.image} alt="" className="h-full w-full object-cover opacity-70 transition duration-700 group-hover:scale-[1.035] group-hover:opacity-90"/><div className="absolute inset-0 bg-gradient-to-t from-[#080a10] to-transparent"/></div>
+ <div className="p-6"><p className="text-[9px] tracking-[.2em]" style={{color}}>{project.subtitle}</p><div className="mt-3 flex items-start justify-between gap-5"><div><h3 className="text-2xl font-medium">{project.title}</h3><p className="mt-3 max-w-lg text-sm leading-6 text-white/45">{project.description}</p></div><ArrowUpRight className="shrink-0 text-white/40"/></div><div className="mt-6 flex gap-2">{project.tags.map(t=><span key={t} className="rounded-full border border-white/10 px-3 py-1 text-[9px] tracking-wider text-white/45">{t}</span>)}</div>
+ </div></article>}
