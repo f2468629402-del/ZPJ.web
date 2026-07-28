@@ -548,6 +548,7 @@ function VideoGrid({ color }: { color: string }) {
 
 function ContactGrid({ color }: { color: string }) {
   const [copiedLabel, setCopiedLabel] = useState<string | null>(null);
+  const [qrOpen, setQrOpen] = useState(false);
 
   const handleCopy = useCallback(async (contact: typeof contacts[number]) => {
     try {
@@ -594,9 +595,21 @@ function ContactGrid({ color }: { color: string }) {
                   <p className="text-xl font-medium text-white md:text-2xl">{contact.display}</p>
                 </div>
                 {isWechat ? (
-                  <span className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-lg border border-white/15 bg-white/[.06] p-1.5 shadow-[0_4px_18px_rgba(0,0,0,.4)] transition duration-300 group-hover:scale-105">
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setQrOpen(true);
+                    }}
+                    className="group/qr relative flex h-14 w-14 items-center justify-center overflow-hidden rounded-lg border border-white/15 bg-white/[.06] p-1.5 shadow-[0_4px_18px_rgba(0,0,0,.4)] transition duration-300 group-hover:scale-105 hover:border-cyan-400/40 hover:shadow-[0_0_20px_rgba(34,184,255,.25)]"
+                    aria-label="放大查看微信二维码"
+                    title="点击放大二维码"
+                  >
                     <img src={wechatQrImage} alt="微信二维码缩略图" width={56} height={56} loading="lazy" decoding="async" className="h-full w-full rounded object-cover" />
-                  </span>
+                    <span className="pointer-events-none absolute inset-0 flex items-center justify-center rounded-lg bg-black/0 transition group-hover/qr:bg-black/30">
+                      <Maximize2 size={16} className="scale-75 text-white opacity-0 transition group-hover/qr:opacity-100" />
+                    </span>
+                  </button>
                 ) : null}
                 <span className="flex items-center gap-2 text-[10px] tracking-[.18em] text-white/40 transition group-hover:text-white">
                   {isCopied ? (
@@ -627,6 +640,15 @@ function ContactGrid({ color }: { color: string }) {
           );
         })}
       </div>
+
+      {qrOpen && (
+        <Lightbox
+          images={[{ src: wechatQrImage, alt: "微信二维码", title: "微信账号：f13310039786", subtitle: "WECHAT QR CODE" }]}
+          index={0}
+          onClose={() => setQrOpen(false)}
+          onNavigate={() => {}}
+        />
+      )}
     </section>
   );
 }
