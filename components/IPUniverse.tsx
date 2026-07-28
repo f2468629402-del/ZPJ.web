@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowUpRight, Box, Maximize2, Orbit, Sparkles, UserRound } f
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { projectsByModule } from "@/data/projects";
+import { getImagePath } from "@/lib/basePath";
 import { Lightbox, type LightboxImage } from "./Lightbox";
 
 const profileItems = [
@@ -88,7 +89,7 @@ export function IPUniverse() {
             transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
           />
           <motion.img
-            src="/images/ip/lilac-dream.png"
+            src={getImagePath("/images/ip/lilac-dream.png")}
             alt="紫色渐变长发、浅紫服装的 Lilac Dream 潮玩角色"
             animate={{ y: [0, -10, 0] }}
             transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut" }}

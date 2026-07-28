@@ -4,6 +4,7 @@ import { useState, useCallback } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Phone, MessageCircle, Mail, Copy, Check } from "lucide-react";
+import { getImagePath } from "@/lib/basePath";
 import {
   aboutContactProfile,
   aboutContactMethods,
@@ -71,7 +72,7 @@ export function AboutContactSection() {
             {/* 写真照片 */}
             <div className="relative mb-8 w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0d1321]">
               <Image
-                src="/images/portrait.jpg"
+                src={getImagePath("/images/portrait.jpg")}
                 alt="FENG 个人写真"
                 width={800}
                 height={900}
