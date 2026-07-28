@@ -9,6 +9,7 @@ import { Module } from "@/data/modules";
 import { contacts, Project, projectsByModule, videoProjects, videoZones, wechatQrImage } from "@/data/projects";
 import { Lightbox, type LightboxImage } from "./Lightbox";
 import { WorkCard } from "./WorkCard";
+import { getImagePath } from "@/lib/basePath";
 
 const copy = {
   selectedWorks: "\u7cbe\u9009\u9879\u76ee",
@@ -775,7 +776,7 @@ function About({ color }: { color: string }) {
 }
 
 function PortraitSlot({ index, color }: { index: number; color: string }) {
-  const imageSrc = `/images/portrait-${String(index).padStart(2, "0")}.png`;
+  const imageSrc = getImagePath(`/images/portrait-${String(index).padStart(2, "0")}.png`);
 
   return (
     <div
