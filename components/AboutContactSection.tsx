@@ -66,138 +66,139 @@ export function AboutContactSection() {
       </h2>
 
       <div className="mx-auto max-w-[1672px] overflow-hidden rounded-[26px] border border-white/10 bg-[#070b15] shadow-[0_0_50px_rgba(31,139,255,.08)]">
-        <div className="grid gap-0 md:grid-cols-2 md:divide-x md:divide-white/8">
-          {/* ═══════════ CONTACT ═══════════ */}
-          <div className="flex flex-col justify-center gap-3 p-8 md:p-12 lg:p-14">
-            <p className="text-xs font-semibold tracking-[.16em] text-cyan-400">
-              CONTACT
-            </p>
-            <h3 className="mb-2 text-2xl font-semibold tracking-tight text-white md:text-3xl">
-              联系方式
-            </h3>
-
-            <div className="space-y-3">
-              {aboutContactMethods.map((method) => {
-                const Icon = iconMap[method.id];
-                const isCopied = copiedId === method.id;
-
-                // 决定是否可点击以及行为
-                const hasHref = !!method.href;
-                const isCopyable = method.copyable ?? false;
-
-                const content = (
-                  <div className="flex w-full items-center gap-4 rounded-xl border border-white/8 bg-white/[0.03] px-5 py-4 transition-all duration-200 hover:border-white/20 hover:bg-white/[0.06] hover:shadow-[0_0_20px_rgba(31,139,255,.08)]">
-                    <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-cyan-500/10 text-cyan-400">
-                      <Icon size={20} />
-                    </span>
-                    <div className="min-w-0 flex-1 text-left">
-                      <p className="text-xs font-medium tracking-[.08em] text-white/40">
-                        {method.label}
-                      </p>
-                      <p className="truncate text-sm font-medium text-white/85">
-                        {method.value}
-                      </p>
-                    </div>
-                    <span className="shrink-0 text-xs text-white/30">
-                      {isCopied ? (
-                        <Check size={16} className="text-emerald-400" />
-                      ) : isCopyable ? (
-                        <Copy size={16} />
-                      ) : hasHref ? (
-                        <span className="text-cyan-400">&#x2197;</span>
-                      ) : null}
-                    </span>
-                  </div>
-                );
-
-                if (hasHref) {
-                  return (
-                    <a
-                      key={method.id}
-                      href={method.href}
-                      className="block"
-                      target={method.id === "phone" ? undefined : "_blank"}
-                      rel={
-                        method.id === "phone"
-                          ? undefined
-                          : "noopener noreferrer"
-                      }
-                    >
-                      {content}
-                    </a>
-                  );
-                }
-
-                if (isCopyable) {
-                  return (
-                    <button
-                      key={method.id}
-                      type="button"
-                      className="block w-full text-left"
-                      onClick={() => handleCopy(method)}
-                    >
-                      {content}
-                      {isCopied && (
-                        <span className="mt-1 block text-xs text-emerald-400">
-                          已复制到剪贴板
-                        </span>
-                      )}
-                    </button>
-                  );
-                }
-
-                return (
-                  <div key={method.id} className="block">
-                    {content}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* ═══════════ ABOUT ME ═══════════ */}
-          <div className="flex flex-col justify-center p-8 md:p-12 lg:p-14">
-            {/* 写真照片 */}
-            <div className="relative mb-8 w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0d1321]">
+        <div className="flex flex-col md:flex-row md:divide-x md:divide-white/8">
+          
+          {/* ═══ LEFT: 写真照片 ═══ */}
+          <div className="flex items-center p-8 md:w-[45%] md:shrink-0 md:p-12 lg:p-14">
+            <div className="relative w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0d1321]">
               <Image
                 src={getImagePath("/images/portrait.jpg")}
                 alt="FENG 个人写真"
                 width={800}
                 height={900}
-                sizes="(max-width: 768px) calc(100vw - 56px), min(800px, calc(50vw - 80px))"
+                sizes="(max-width: 768px) calc(100vw - 56px), min(800px, 45vw)"
                 loading="lazy"
                 decoding="async"
                 className="block h-auto w-full object-cover"
               />
             </div>
+          </div>
 
-            <p className="text-xs font-semibold tracking-[.16em] text-cyan-400">
-              {aboutContactProfile.titleEn}
-            </p>
-            <h3 className="mt-2 text-2xl font-semibold tracking-tight text-white md:text-3xl">
-              {aboutContactProfile.title}
-            </h3>
-            <div className="mt-5 space-y-3 text-sm leading-relaxed text-white/60 md:text-base">
-              {aboutContactProfile.body
-                .split("\u000a\u000a")
-                .map((paragraph, idx) => (
-                  <p key={idx}>{paragraph}</p>
+          {/* ═══ RIGHT: 关于我 + 联系方式 ═══ */}
+          <div className="flex flex-col justify-center gap-0 divide-y divide-white/8 p-8 md:flex-1 md:p-12 lg:p-14">
+            
+            {/* ── ABOUT ME ── */}
+            <div className="pb-8 md:pb-10">
+              <p className="text-xs font-semibold tracking-[.16em] text-cyan-400">
+                {aboutContactProfile.titleEn}
+              </p>
+              <h3 className="mt-2 text-2xl font-semibold tracking-tight text-white md:text-3xl">
+                {aboutContactProfile.title}
+              </h3>
+              <div className="mt-5 space-y-3 text-sm leading-relaxed text-white/60 md:text-base">
+                {aboutContactProfile.body
+                  .split("\u000a\u000a")
+                  .map((paragraph, idx) => (
+                    <p key={idx}>{paragraph}</p>
+                  ))}
+              </div>
+              {/* Skills tags */}
+              <div className="mt-6 flex flex-wrap gap-2">
+                {aboutContactProfile.skills.map((skill, i) => (
+                  <span
+                    key={skill}
+                    className={`rounded-full border px-3 py-1 text-xs font-medium ${
+                      skillColorMap[i % skillColorMap.length]
+                    }`}
+                  >
+                    {skill}
+                  </span>
                 ))}
+              </div>
             </div>
 
-            {/* Skills tags */}
-            <div className="mt-6 flex flex-wrap gap-2">
-              {aboutContactProfile.skills.map((skill, i) => (
-                <span
-                  key={skill}
-                  className={`rounded-full border px-3 py-1 text-xs font-medium ${
-                    skillColorMap[i % skillColorMap.length]
-                  }`}
-                >
-                  {skill}
-                </span>
-              ))}
+            {/* ── CONTACT ── */}
+            <div className="pt-8 md:pt-10">
+              <p className="text-xs font-semibold tracking-[.16em] text-cyan-400">
+                CONTACT
+              </p>
+              <h3 className="mb-4 mt-2 text-2xl font-semibold tracking-tight text-white md:text-3xl">
+                联系方式
+              </h3>
+
+              <div className="space-y-3">
+                {aboutContactMethods.map((method) => {
+                  const Icon = iconMap[method.id];
+                  const isCopied = copiedId === method.id;
+                  const hasHref = !!method.href;
+                  const isCopyable = method.copyable ?? false;
+
+                  const content = (
+                    <div className="flex w-full items-center gap-4 rounded-xl border border-white/8 bg-white/[0.03] px-5 py-4 transition-all duration-200 hover:border-white/20 hover:bg-white/[0.06] hover:shadow-[0_0_20px_rgba(31,139,255,.08)]">
+                      <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-cyan-500/10 text-cyan-400">
+                        <Icon size={20} />
+                      </span>
+                      <div className="min-w-0 flex-1 text-left">
+                        <p className="text-xs font-medium tracking-[.08em] text-white/40">
+                          {method.label}
+                        </p>
+                        <p className="truncate text-sm font-medium text-white/85">
+                          {method.value}
+                        </p>
+                      </div>
+                      <span className="shrink-0 text-xs text-white/30">
+                        {isCopied ? (
+                          <Check size={16} className="text-emerald-400" />
+                        ) : isCopyable ? (
+                          <Copy size={16} />
+                        ) : hasHref ? (
+                          <span className="text-cyan-400">&#x2197;</span>
+                        ) : null}
+                      </span>
+                    </div>
+                  );
+
+                  if (hasHref) {
+                    return (
+                      <a
+                        key={method.id}
+                        href={method.href}
+                        className="block"
+                        target={method.id === "phone" ? undefined : "_blank"}
+                        rel={method.id === "phone" ? undefined : "noopener noreferrer"}
+                      >
+                        {content}
+                      </a>
+                    );
+                  }
+
+                  if (isCopyable) {
+                    return (
+                      <button
+                        key={method.id}
+                        type="button"
+                        className="block w-full text-left"
+                        onClick={() => handleCopy(method)}
+                      >
+                        {content}
+                        {isCopied && (
+                          <span className="mt-1 block text-xs text-emerald-400">
+                            已复制到剪贴板
+                          </span>
+                        )}
+                      </button>
+                    );
+                  }
+
+                  return (
+                    <div key={method.id} className="block">
+                      {content}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
+
           </div>
         </div>
       </div>
