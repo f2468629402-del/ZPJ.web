@@ -67,47 +67,6 @@ export function AboutContactSection() {
 
       <div className="mx-auto max-w-[1672px] overflow-hidden rounded-[26px] border border-white/10 bg-[#070b15] shadow-[0_0_50px_rgba(31,139,255,.08)]">
         <div className="grid gap-0 md:grid-cols-2 md:divide-x md:divide-white/8">
-          {/* ═══════════ ABOUT ME ═══════════ */}
-          <div className="flex flex-col justify-center p-8 md:p-12 lg:p-14">
-            {/* 写真照片 */}
-            <div className="relative mb-8 w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0d1321]">
-              <Image
-                src={getImagePath("/images/portrait.jpg")}
-                alt="FENG 个人写真"
-                width={800}
-                height={900}
-                sizes="(max-width: 768px) calc(100vw - 56px), min(800px, calc(50vw - 80px))"
-                loading="lazy"
-                decoding="async"
-                className="block h-auto w-full object-cover"
-              />
-            </div>
-
-            <p className="text-xs font-semibold tracking-[.16em] text-cyan-400">
-              {aboutContactProfile.titleEn}
-            </p>
-            <h3 className="mt-2 text-2xl font-semibold tracking-tight text-white md:text-3xl">
-              {aboutContactProfile.title}
-            </h3>
-            <p className="mt-5 text-sm leading-relaxed text-white/60 md:text-base">
-              {aboutContactProfile.body}
-            </p>
-
-            {/* Skills tags */}
-            <div className="mt-6 flex flex-wrap gap-2">
-              {aboutContactProfile.skills.map((skill, i) => (
-                <span
-                  key={skill}
-                  className={`rounded-full border px-3 py-1 text-xs font-medium ${
-                    skillColorMap[i % skillColorMap.length]
-                  }`}
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
-
           {/* ═══════════ CONTACT ═══════════ */}
           <div className="flex flex-col justify-center gap-3 p-8 md:p-12 lg:p-14">
             <p className="text-xs font-semibold tracking-[.16em] text-cyan-400">
@@ -193,6 +152,51 @@ export function AboutContactSection() {
                   </div>
                 );
               })}
+            </div>
+          </div>
+
+          {/* ═══════════ ABOUT ME ═══════════ */}
+          <div className="flex flex-col justify-center p-8 md:p-12 lg:p-14">
+            {/* 写真照片 */}
+            <div className="relative mb-8 w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0d1321]">
+              <Image
+                src={getImagePath("/images/portrait.jpg")}
+                alt="FENG 个人写真"
+                width={800}
+                height={900}
+                sizes="(max-width: 768px) calc(100vw - 56px), min(800px, calc(50vw - 80px))"
+                loading="lazy"
+                decoding="async"
+                className="block h-auto w-full object-cover"
+              />
+            </div>
+
+            <p className="text-xs font-semibold tracking-[.16em] text-cyan-400">
+              {aboutContactProfile.titleEn}
+            </p>
+            <h3 className="mt-2 text-2xl font-semibold tracking-tight text-white md:text-3xl">
+              {aboutContactProfile.title}
+            </h3>
+            <div className="mt-5 space-y-3 text-sm leading-relaxed text-white/60 md:text-base">
+              {aboutContactProfile.body
+                .split("\u000a\u000a")
+                .map((paragraph, idx) => (
+                  <p key={idx}>{paragraph}</p>
+                ))}
+            </div>
+
+            {/* Skills tags */}
+            <div className="mt-6 flex flex-wrap gap-2">
+              {aboutContactProfile.skills.map((skill, i) => (
+                <span
+                  key={skill}
+                  className={`rounded-full border px-3 py-1 text-xs font-medium ${
+                    skillColorMap[i % skillColorMap.length]
+                  }`}
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
           </div>
         </div>
